@@ -16,7 +16,7 @@
     $seance = htmlspecialchars($_POST["seance"], ENT_QUOTES);
 
     //Connexion à la BDD et requête : on recherche les inscription de l'élève pour cette séance
-    $dbhost = 'localhost'; $dbuser = 'root'; $dbpass = 'root'; $dbname = 'nf92a012';
+    include 'secret.php';
     $connect=mysqli_connect($dbhost,$dbuser,$dbpass,$dbname) or die ('Error connecting to mysql');
     $result = mysqli_query($connect, "SELECT * FROM inscription WHERE idseances='$seance' AND ideleve='$eleve'");
 

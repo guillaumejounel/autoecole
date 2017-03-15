@@ -17,7 +17,7 @@
     //Si confirmation de la suppression
     if(isset($_POST['eta']) AND $_POST['eta']=="OUI") {
       //Connexion à la BDD et requête : supprimer la séance et toutes les inscriptions associées
-      $dbhost = 'localhost'; $dbuser = 'root'; $dbpass = 'root'; $dbname = 'nf92a012';
+      include 'secret.php';
       $connect = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname) or die ('Error connecting to mysql');
       $query = "DELETE seances, inscription
                 FROM seances

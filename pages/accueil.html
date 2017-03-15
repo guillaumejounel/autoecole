@@ -22,16 +22,16 @@
     $("#stats").show();
   });
     function depart() {
-      $.get("compteurs.php?table=eleves").done(function(e) { $("#nbetu").html(e); });
-      $.get("compteurs.php?table=seances").done(function(e) { $("#nbcours").html(e); });
-      $.get("compteurs.php?table=themes").done(function(e) { $("#nbthemes").html(e); });
+      $.get({url:"compteurs.php?table=eleves", cache:false}).done(function(e) { $("#nbetu").html(e); });
+      $.get({url:"compteurs.php?table=seances", cache:false}).done(function(e) { $("#nbcours").html(e); });
+      $.get({url:"compteurs.php?table=themes", cache:false}).done(function(e) { $("#nbthemes").html(e); });
     }
     depart();
     function reinit() {
-      $.get("compteurs.php?table=init").done(function(e) { $("#init").html(e); depart(); });
+      $("#init").html("Patientez SVP...");  $.get({url:"compteurs.php?table=init&", cache:false}).done(function(e) { $("#init").html(e); depart(); });
     }
     function vider() {
-      $.get("compteurs.php?table=vider").done(function(e) { $("#init2").html(e); depart(); });
+      $("#init2").html("Patientez SVP..."); $.get({url:"compteurs.php?table=vider", cache:false}).done(function(e) { $("#init2").html(e); depart(); });
     }
     parent.montrerPage();
   </script>

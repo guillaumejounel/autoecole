@@ -11,6 +11,7 @@
 	<h2>Consultation d'un élève :</h2>
   <!-- METHODE GET (plus adaptée/accessible car ça évite de mettre des input un peu partout) -->
   <?php //Connexion à la BDD et requête : obtenir tous les noms des élèves"
+  include 'secret.php';
   $connect = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname) or die ('Error connecting to mysql');
   //Consultation de tous les élèves
   $result = mysqli_query($connect, "SELECT ideleve, nom, prenom FROM eleves ORDER BY nom, prenom");

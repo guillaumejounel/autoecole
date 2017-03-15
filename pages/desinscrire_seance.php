@@ -23,7 +23,7 @@
       $ideleve = htmlspecialchars($_GET['ideleve'], ENT_QUOTES);
     }
     //Connexion à la BDD et requête : obtenir tous les noms/id des thèmes non supprimés"
-    $dbhost = 'localhost'; $dbuser = 'root'; $dbpass = 'root'; $dbname = 'nf92a012';
+    include 'secret.php';
     $connect = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname) or die ('Error connecting to mysql');
 
     if(isset($idseance)) {

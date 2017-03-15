@@ -19,6 +19,7 @@
     $descriptif = htmlspecialchars($_POST["descriptif"], ENT_QUOTES);
 
     //Connection à la BDD
+    include 'secret.php';
     $connect=mysqli_connect($dbhost,$dbuser,$dbpass,$dbname) or die ('Error connecting to mysql');
 
     //Recherche du thème dans la base (pour savoir s'il existe déjà)

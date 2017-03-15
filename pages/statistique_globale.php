@@ -12,7 +12,7 @@
 	<h2>Statistiques globales :</h2>
 
   <?php
-  $dbhost = 'localhost'; $dbuser = 'root'; $dbpass = 'root'; $dbname = 'nf92a012';
+  include 'secret.php';
   $connect = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname) or die ('Error connecting to mysql');
   $result = mysqli_query($connect, "SELECT COUNT(ideleve) FROM eleves");
   $row = mysqli_fetch_array($result);
@@ -101,7 +101,7 @@
     </script>
 
     <?php
-      $dbhost = 'localhost'; $dbuser = 'root'; $dbpass = 'root'; $dbname = 'nf92a012';
+      include 'secret.php';
       $connect = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname) or die ('Error connecting to mysql');
       $query = "SELECT date FROM `inscription`
                 INNER JOIN seances

@@ -1,5 +1,11 @@
 <?php
+header('Pragma: no-cache');
+header('Expires: 0');
+header('Last-Modified: ' . gmdate('D, d M Y H:i:s') . ' GMT');
+header('Cache-Control: no-cache, must-revalidate');
+include 'secret.php';
 $connect=mysqli_connect($dbhost,$dbuser,$dbpass,$dbname) or die ('Error connecting to mysql');
+
 $nomtable = htmlspecialchars($_GET['table'], ENT_QUOTES);
 if($nomtable=='init') {
   $sql = file_get_contents('localhost.sql');

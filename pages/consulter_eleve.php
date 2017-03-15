@@ -18,6 +18,7 @@
     //Récupération des données
     $ideleve = htmlspecialchars($_GET['ideleve'], ENT_QUOTES);
     //Connexion à la BDD et requête : obtenir toutes les informations de l'élève
+    include 'secret.php';
     $connect = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname) or die ('Error connecting to mysql');
     $result = mysqli_query($connect, "SELECT * FROM eleves WHERE ideleve='$ideleve'");
     if(!$result) {

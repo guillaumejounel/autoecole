@@ -54,6 +54,7 @@ if($_POST['eta']=='ANNULER') {
       echo "<p><a href='ajout_eleve.html'>Ajouter un autre élève ?</a></p>";
     } else {
       //Connection à la BDD
+      include 'secret.php';
       $connect=mysqli_connect($dbhost,$dbuser,$dbpass,$dbname) or die ('Error connecting to mysql');
       //Recherche de l'élève dans la base (pour savoir s'il existe déjà)
       $result=mysqli_query($connect, "SELECT dateInscription FROM eleves WHERE nom = '$nom' AND prenom = '$prenom' LIMIT 1");

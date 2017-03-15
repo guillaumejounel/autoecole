@@ -14,7 +14,7 @@
     //Récupération des données
     $idseance = htmlspecialchars($_POST['idseance'], ENT_QUOTES);
     //Connexion à la BDD
-    $dbhost = 'localhost'; $dbuser = 'root'; $dbpass = 'root'; $dbname = 'nf92a012';
+    include 'secret.php';
     $connect = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname) or die ('Error connecting to mysql');
     //Mise à jour de chaque note pour chaque élève
     foreach ($_POST as $ideleve => $nbfautes) {

@@ -18,7 +18,7 @@
     //Récupération des données
     $idseance = htmlspecialchars($_POST['idseance'], ENT_QUOTES);
     //Connexion à la BDD et requête
-    $dbhost = 'localhost'; $dbuser = 'root'; $dbpass = 'root'; $dbname = 'nf92a012';
+    include 'secret.php';
     $connect = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname) or die ('Error connecting to mysql');
     //Requête : élèves ayant participé à la séance
     $query = "SELECT eleves.ideleve, nom, prenom, dateInscription, nbfautes

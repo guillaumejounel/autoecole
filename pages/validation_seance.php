@@ -15,7 +15,7 @@
   $date = date("Y\-m\-d"); $heure = date("H:i:s");
   setlocale(LC_TIME, 'fr_FR.UTF8');
   //Connexion à la BDD et requête
-  $dbhost = 'localhost'; $dbuser = 'root'; $dbpass = 'root'; $dbname = 'nf92a012';
+  include 'secret.php';
   $connect = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname) or die ('Error connecting to mysql');
   //Requête : séances non notées antérieures à la date/heure du jour rangées de la plus ancienne à la plus récente
   $query = "SELECT * FROM seances INNER JOIN themes

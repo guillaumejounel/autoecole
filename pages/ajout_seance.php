@@ -21,6 +21,7 @@
   		<?php
       date_default_timezone_set('Europe/Paris');
       //Connexion à la BDD et requête : obtenir tous les thèmes non supprimés
+      include 'secret.php';
       $connect = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname) or die ('Error connecting to mysql');
       $result = mysqli_query($connect, "SELECT idtheme, nom FROM themes WHERE supprime = 0 ORDER BY nom");
       if($result) {

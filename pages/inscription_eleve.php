@@ -17,7 +17,7 @@
 	$date = date("Y\-m\-d"); $heure = date("H:i:s");
 
   //Connexion à la BDD
-  $dbhost = 'localhost'; $dbuser = 'root'; $dbpass = 'root'; $dbname = 'nf92a012';
+  include 'secret.php';
   $connect=mysqli_connect($dbhost,$dbuser,$dbpass,$dbname) or die ('Error connecting to mysql'); ?>
 
   <!-- Si le thème est déjà choisi on change l'action du formulaire -->

@@ -9,7 +9,8 @@
 </head>
 <body class="fenetre">
 	<h2>Visualisation du calendrier d'un élève :</h2>
-  <?php //Vérification de la transimission des données
+  <?php include 'secret.php';
+  //Vérification de la transimission des données
   if(isset($_GET['ideleve'])) {
     //Obtention de la date
     date_default_timezone_set('Europe/Paris');

@@ -61,6 +61,7 @@ if($_POST['eta']=='ANNULER') {
       echo "<p><a href='ajout_seance.php'>Ajouter une autre séance ?</a></p>";
     } else {
       //Connection à la BDD
+      include 'secret.php';
       $connect=mysqli_connect($dbhost,$dbuser,$dbpass,$dbname) or die ('Error connecting to mysql');
       //Recherche de la séance dans la base ce même jour (pour savoir si elle existe déjà)
       $result=mysqli_query($connect, "SELECT heure FROM seances WHERE date = '$date_seance' AND id_theme = '$menuChoixTheme'");

@@ -17,7 +17,7 @@
     //Si la confirmation a été faite
     if(isset($_POST['eta']) AND $_POST['eta']=="OUI") {
       //Connexion à la BDD : suppression du thème
-      $dbhost = 'localhost'; $dbuser = 'root'; $dbpass = 'root'; $dbname = 'nf92a012';
+      include 'secret.php';
       $connect = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname) or die ('Error connecting to mysql');
       $result = mysqli_query($connect, "UPDATE themes SET supprime = 1 WHERE idtheme = $idtheme");
       if(!$result) {

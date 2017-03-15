@@ -15,7 +15,7 @@
     echo "<p class='ok'>Suppression correctement annulée</p>";
   } ?>
 	<?php //Connexion à la BDD et requête : thèmes non supprimés
-        $dbhost = 'localhost'; $dbuser = 'root'; $dbpass = 'root'; $dbname = 'nf92a012';
+    include 'secret.php';
   $connect = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname) or die ('Error connecting to mysql');
   $result = mysqli_query($connect, "SELECT * FROM themes WHERE supprime = 0 ORDER BY nom");
   if(!$result) {

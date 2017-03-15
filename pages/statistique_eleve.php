@@ -10,7 +10,7 @@
 <body class="fenetre">
 	<h2>Statistiques d'un élève :</h2>
   <?php //Connexion à la BDD et requête
-  $dbhost = 'localhost'; $dbuser = 'root'; $dbpass = 'root'; $dbname = 'nf92a012';
+  include 'secret.php';
   $connect = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname) or die ('Error connecting to mysql');
   if(isset($_GET['ideleve'])) {
     date_default_timezone_set('Europe/Paris');

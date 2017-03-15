@@ -1,2 +1,1 @@
-<?php include 'pages/secret.php';
-include 'autoecole.html'; ?>
+<?php include 'autoecole.html'; ?>
