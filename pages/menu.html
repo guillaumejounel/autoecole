@@ -1,0 +1,53 @@
+<!DOCTYPE>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Menu</title>
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+</head>
+<body>
+	<h3>Navigation</h3>
+	<ul>
+		<li id="page0"><a OnClick="menu(0)" href="accueil.html" target="navigation">Accueil du site</a></li>
+
+    <i>Éleves</i>
+		<li id="page1"><a OnClick="menu(1)" href="ajout_eleve.html" target="navigation">Ajout d'un élève</a></li>
+		<li id="page6"><a OnClick="menu(6)" href="consultation_eleve.php" target="navigation">Consulter un élève</a></li>
+		<li id="page8"><a OnClick="menu(8)" href="visualisation_calendrier_eleve.php" target="navigation">Calendrier d'un élève</a></li>
+
+    <i>Inscriptions</i>
+		<li id="page4"><a OnClick="menu(4)" href="inscription_eleve.php" target="navigation">Inscrire un élève</a></li>
+		<li id="page9"><a OnClick="menu(9)" href="desinscription_seance.php" target="navigation">Désinscription séance</a></li>
+
+    <i>Séances</i>
+		<li id="page3"><a OnClick="menu(3)" href="ajout_seance.php" target="navigation">Ajout d'une séance</a></li>
+		<li id="page10"><a OnClick="menu(10)" href="suppression_seance.php" target="navigation">Supprimer une séance</a></li>
+		<li id="page5"><a OnClick="menu(5)" href="validation_seance.php" target="navigation">Valider des séances</a></li>
+
+    <i>Thèmes</i>
+		<li id="page2"><a OnClick="menu(2)" href="ajout_theme.html" target="navigation">Ajout d'un thème</a></li>
+		<li id="page7"><a OnClick="menu(7)" href="suppression_theme.php" target="navigation">Supprimer un thème</a></li>
+
+    <i>Statistiques</i>
+		<li id="page11"><a OnClick="menu(11)" href="statistique_eleve.php" target="navigation">Statistique d'un élève</a></li>
+		<li id="page12"><a OnClick="menu(12)" href="statistique_globale.php" target="navigation">Statistiques globales</a></li>
+	</ul>
+  <script>
+    menu(0);
+    function menu(lien) {
+      for (var i=0; i<13; i++) {
+        if(i==lien) {
+          document.getElementById("page"+i).getElementsByTagName("a")[0].style.color = "black";
+          document.getElementById("page"+i).style.borderBottom = "2px solid rgba(0,0,0,0.1)";
+          document.getElementById("page"+i).style.textShadow = "0px 0px 2px rgba(0,0,0,0.1)";
+        } else {
+          document.getElementById("page"+i).getElementsByTagName("a")[0].style.color = "#184E5B";
+          document.getElementById("page"+i).style.borderBottom = "2px solid transparent";
+          document.getElementById("page"+i).style.textShadow = "none";
+        }
+      }
+    }
+  </script>
+</body>
+</html>

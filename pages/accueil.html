@@ -1,0 +1,39 @@
+<!DOCTYPE>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Accueil</title>
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+  <script>parent.cacherPage()</script>
+</head>
+<body>
+	<p><span id="ac01">Bienvenue</span> <span id="ac02">sur le site de</span> <span id="ac03"><span id="ac03a">l'</span>auto-école</span></p>
+  <!-- Stats nb heures, nb inscrits, nb... -->
+  <div id="stats">
+    <div class="item"><span id="nbetu"></span><span class="descr">étudiants inscrits</span></div>
+    <div class="item"><span id="nbthemes"></span><span class="descr">thèmes enseignés</span></div>
+    <div class="item"><span id="nbcours"></span><span class="descr">cours donnés</span></div>
+  </div>
+  <span id="init" OnClick='reinit()'>Démonstration</span>
+  <span id="init2" OnClick='vider()'>Vider la BDD</span>
+  <script>
+  $(document).ready(function() {
+    $("#stats").show();
+  });
+    function depart() {
+      $.get("compteurs.php?table=eleves").done(function(e) { $("#nbetu").html(e); });
+      $.get("compteurs.php?table=seances").done(function(e) { $("#nbcours").html(e); });
+      $.get("compteurs.php?table=themes").done(function(e) { $("#nbthemes").html(e); });
+    }
+    depart();
+    function reinit() {
+      $.get("compteurs.php?table=init").done(function(e) { $("#init").html(e); depart(); });
+    }
+    function vider() {
+      $.get("compteurs.php?table=vider").done(function(e) { $("#init2").html(e); depart(); });
+    }
+    parent.montrerPage();
+  </script>
+</body>
+</html>

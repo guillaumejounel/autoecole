@@ -1,0 +1,31 @@
+<!DOCTYPE>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Auto-école</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+</head>
+<body>
+  <script>
+
+  </script>
+  <div id="contener">
+    <div id="barre">GESTIONNAIRE EN LIGNE DE L'AUTO-ÉCOLE</div>
+    <iframe id="menu" name="menu" border="0" src="pages/menu.html"></iframe>
+    <div id="wrapper">
+      <iframe id="fenetre" src="pages/accueil.html" border="0" name="navigation"></iframe>
+      <div id="degrade"></div>
+    </div>
+    <a href="https://www.facebook.com/Guillaume.Jounel" target="_blank"><div id="credits">NF92 A15 - Créé avec ♥ par Guillaume Jounel</div></a>
+  </div>
+  <script>
+  function montrerPage() {
+      $('iframe#fenetre').fadeIn();
+  }
+  function cacherPage() {
+    $('iframe#fenetre').hide();
+  }
+  </script>
+</body>
+</html>
