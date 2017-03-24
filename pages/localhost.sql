@@ -37,10 +37,10 @@ INSERT INTO `eleves` (`ideleve`, `nom`, `prenom`, `dateNaiss`, `dateInscription`
 (103, 'Jinn', 'Qui-Gon', '1977-02-06', '2015-12-27'),
 (104, 'Rrwah', 'Chewbacca', '1995-05-20', '2015-12-30'),
 (105, 'Vador', 'Dark', '1946-12-20', '2016-01-01'),
-(107, 'Motti', 'GÃ©nÃ©ral', '1956-04-20', '2016-01-01'),
+(107, 'Motti', 'Général', '1956-04-20', '2016-01-01'),
 (108, 'Skywalker', 'Shmi', '1970-01-04', '2016-01-01'),
 (109, 'Lars', 'Owen', '1956-07-05', '2016-01-01'),
-(110, 'Hux', 'GÃ©nÃ©ral', '1985-05-04', '2016-01-01'),
+(110, 'Hux', 'Général', '1985-05-04', '2016-01-01'),
 (111, 'Gunray', 'Nute', '1946-01-04', '2016-01-01'),
 (112, 'Dameron', 'Poe', '1987-06-20', '2016-01-01'),
 (113, 'Ren', 'Kylo', '1989-01-24', '2016-01-01')£
@@ -290,12 +290,12 @@ CREATE TABLE `themes` (
 TRUNCATE TABLE `themes`£
 
 INSERT INTO `themes` (`idtheme`, `nom`, `supprime`, `descriptif`) VALUES
-(31, 'Maniement du sabre laser', 0, 'Le maniement du sabre laser est une compÃ©tence essentielle Ã  tout Jedi dÃ©sirant combattre le cÃ´tÃ© obscur de la force.'),
-(32, 'Pilotage vaisseau spatial', 0, 'L&#039;école dispose d&#039;un vaisseau spatial supersonique : apprenez Ã  Ã©chapper Ã  vos ennemis et Ã   atterrir Ã  la vitesse de la lumiÃ¨re.'),
-(33, 'Tir au vaisseau spatial', 0, 'Devenez un pro du tir au vaisseau et apprenez notamment Ã  vous dÃ©barrasser efficacement des vaisseaux du Nouvel Ordre en cas de poursuite intergalactique.'),
-(34, 'Usage de la Force', 0, 'Contrôlez votre force : ateliers de déracinage d&#039;arbre ainsi que de persuasion de citadins Ã  vous offrir un verre.'),
-(35, 'Panneaux intergalactiques', 0, 'Sachez respecter les vitesses et les prioritÃ©s selon les voies galactiques que vous empruntez.'),
-(36, 'Passage au côté Obscur d la Fo', 1, '...')£
+(31, 'Maniement du sabre laser', 0, 'Le maniement du sabre laser est une compétence essentielle à tout Jedi désirant combattre le côté obscur de la force.'),
+(32, 'Pilotage vaisseau spatial', 0, 'L&#039;école dispose d&#039;un vaisseau spatial supersonique : apprenez à échapper à vos ennemis et à  atterrir à la vitesse de la lumière.'),
+(33, 'Tir au vaisseau spatial', 0, 'Devenez un pro du tir au vaisseau et apprenez notamment à vous débarrasser efficacement des vaisseaux du Nouvel Ordre en cas de poursuite intergalactique.'),
+(34, 'Usage de la Force', 0, 'Contrôlez votre force : ateliers de déracinage d&#039;arbre ainsi que de persuasion de citadins à vous offrir un verre.'),
+(35, 'Panneaux intergalactiques', 0, 'Sachez respecter les vitesses et les priorités selon les voies galactiques que vous empruntez.'),
+(36, 'Passage au côté Obscur de la Force', 1, '...')£
 
 ALTER TABLE `eleves`
   ADD PRIMARY KEY (`ideleve`)£
